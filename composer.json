@@ -1,0 +1,33 @@
+{
+    "name":"hb-agency/opengraph",
+    "description":"A set of OpenGraph tools for Contao Open Source CMS",
+    "keywords":["opengraph", "open graph", "contao"],
+    "type":"contao-module",
+    "license":"LGPL",
+    "authors":[
+        {
+            "name":"HB Agency",
+            "homepage":"http://www.hbagency.com"
+        },
+    ],
+    "require":{
+        "php":">=5.3.2",
+        "contao/core":">=3.3.0,<4.0.0-dev",
+        "contao-community-alliance/composer-installer":"*",
+        "contao-legacy/namespaceclassloader":">=1.0.1",
+    },
+    "autoload": {
+        "psr-0": {
+            "HBAgency\\": [
+                "system/modules/opengraph/library/",
+            ]
+        },
+    },
+    "extra":{
+        "contao": {
+            "sources":{
+                "": "system/modules/opengraph",
+            },
+        },
+    }
+}
