@@ -33,8 +33,8 @@ class GetContentElement extends \Controller
 	 */
     public function run($objRow, $strBuffer, $objElement)
     {
-        //Pass row to parser controller
-        if (isset($GLOBALS['OG_PARSERS']['CONTENT_ELEMENTS'][$objRow->type]) && is_array($GLOBALS['OG_PARSERS']['CONTENT_ELEMENTS'][$objRow->type]))
+        //Pass row to parser controller on frontend ONLY
+        if (TL_MODE==='FE' && isset($GLOBALS['OG_PARSERS']['CONTENT_ELEMENTS'][$objRow->type]) && is_array($GLOBALS['OG_PARSERS']['CONTENT_ELEMENTS'][$objRow->type]))
         {
             foreach ($GLOBALS['OG_PARSERS']['CONTENT_ELEMENTS'][$objRow->type] as $callback)
             {

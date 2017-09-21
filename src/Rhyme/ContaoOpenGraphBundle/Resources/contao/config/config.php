@@ -23,6 +23,9 @@ $GLOBALS['TL_HOOKS']['parseFrontendTemplate'][]      = array('\Rhyme\ContaoOpenG
 $GLOBALS['OG_PARSERS'] = array
 (
     'CONTENT_ELEMENTS' => array(
-        'image' => array( array('\Rhyme\ContaoOpenGraphBundle\Parsers\ContentElements\Image', 'parse')),
+        'image'     => array( array('\Rhyme\ContaoOpenGraphBundle\Parsers\ContentElements\Image', 'parse')),
+        'player'    => array( array('\Rhyme\ContaoOpenGraphBundle\Parsers\ContentElements\Video', 'parse')),
+        'youtube'   => array( array('\Rhyme\ContaoOpenGraphBundle\Parsers\ContentElements\Video', 'parse')),
+        'vimeo'     => array( array('\Rhyme\ContaoOpenGraphBundle\Parsers\ContentElements\Video', 'parse')),
     ),
 );
