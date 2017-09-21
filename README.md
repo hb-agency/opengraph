@@ -1,4 +1,4 @@
-opengraph
+Rhyme Contao OpenGraph Bundle
 =========
 
-A set of OpenGraph tools for Contao Open Source CMS
+A set of OpenGraph tools specifically for Contao Open Source CMS

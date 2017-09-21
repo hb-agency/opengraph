@@ -1,15 +1,14 @@
 <?php
 
 /**
- * OpenGraph tag integration for Contao Open Source CMS
+ * Open Graph Tag integration for Contao Open Source CMS
  *
- * Copyright (C) 2014 HB Agency
+ * Copyright (C) 2017 Rhyme Digital
  *
  * @package    OpenGraph
- * @link       http://www.hbagency.com
+ * @link       http://rhyme.digital
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
- 
  
 namespace HBAgency\OpenGraph;
  

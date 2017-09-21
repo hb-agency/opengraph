@@ -1,0 +1,8 @@
+/* Exclude Phpstorm project files */
+.idea
+
+### Composer template
+composer.phar
+composer.lock
+vendor/*
+components/*

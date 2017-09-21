@@ -1,33 +1,28 @@
 {
-    "name":"hb-agency/opengraph",
+    "name":"rhymedigital/opengraph",
     "description":"A set of OpenGraph tools for Contao Open Source CMS",
     "keywords":["opengraph", "open graph", "contao"],
     "type":"contao-module",
-    "license":"LGPL",
+    "license": "LGPL-3.0+",
     "authors":[
         {
-            "name":"HB Agency",
-            "homepage":"http://www.hbagency.com"
-        },
+            "name":"Rhyme Digital, LLC",
+            "homepage":"http://rhyme.digital"
+        }
     ],
     "require":{
-        "php":">=5.3.2",
-        "contao/core":">=3.3.0,<4.0.0-dev",
-        "contao-community-alliance/composer-installer":"*",
-        "contao-legacy/namespaceclassloader":">=1.0.1",
+        "php":">=5.6.0",
+        "symfony/symfony": "^2.8|^3.0",
+        "chriskonnertz/open-graph": "~1",
+        "contao/core-bundle": "^4.3.1",
+        "contao-community-alliance/composer-plugin": "^3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
     },
     "autoload": {
-        "psr-0": {
-            "HBAgency\\": [
-                "system/modules/opengraph/library/",
-            ]
-        },
-    },
-    "extra":{
-        "contao": {
-            "sources":{
-                "": "system/modules/opengraph",
-            },
-        },
+        "psr-4": {
+            "Rhyme\\ContaoOpenGraphBundle\\": "src/Rhyme/ContaoOpenGraphBundle"
+        }
     }
 }
