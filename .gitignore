@@ -1,5 +1,5 @@
 /* Exclude Phpstorm project files */
-.idea
+.idea/*
 
 ### Composer template
 composer.phar
