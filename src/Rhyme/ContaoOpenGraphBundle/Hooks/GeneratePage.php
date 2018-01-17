@@ -33,8 +33,15 @@ class GeneratePage extends \Controller
 	 * @return void
 	 */
     public function run($objPage, $objLayout, &$objPageRegular)
-    {    
-
+    {
+        //Pass row to parser controller on frontend ONLY
+        if (TL_MODE==='FE' && isset($GLOBALS['OG_PARSERS']['PAGES'][$objPage->type]) && is_array($GLOBALS['OG_PARSERS']['PAGES'][$objPage->type]))
+        {
+            foreach ($GLOBALS['OG_PARSERS']['PAGES'][$objPage->type] as $callback)
+            {
+                static::importStatic($callback[0])->{$callback[1]}($objPage, $objLayout, $objPageRegular);
+            }
+        }
     }
 
 }
