@@ -1,36 +1,36 @@
 <?php
 
 /**
- * OpenGraph tag integration for Contao Open Source CMS
+ * Open Graph Tag integration for Contao Open Source CMS
  *
- * Copyright (C) 2014 HB Agency
+ * Copyright (C) 2017 Rhyme Digital
  *
  * @package    OpenGraph
- * @link       http://www.hbagency.com
+ * @link       http://rhyme.digital
  * @license    http://opensource.org/licenses/lgpl-3.0.html
  */
  
- 
-namespace HBAgency\Hooks;
+namespace Rhyme\ContaoOpenGraphBundle\Hooks;
 
  
 /**
  * Add OpenGraph Tags to the output of a frontend page
- * 
+ *
  * @package   OpenGraph
- * @author    Blair Winans <bwinans@hbagency.com>
- * @copyright 2014 HB Agency
+ * @author    Blair Winans <blair@rhyme.digital>
+ * @copyright 2017 Rhyme Digital
  */
-class OpenGraphParseFrontendTemplate extends \Controller
+class ParseFrontendTemplate extends \Controller
 {
     /**
 	 * Add in OpenGraph tags when we detect certain content elements
 	 *
-	 * @param Contao\Template  $objTemplate       The template object
+	 * @param string            $strBuffer
+     * @param \Contao\Template  $objTemplate       The template object
 	 *
-	 * @return void
+	 * @return string
 	 */
-    public function ogParseFrontendTemplate($strBuffer, $strTemplate)
+    public function run($strBuffer, $strTemplate)
     {
         if( is_array($GLOBALS['OPENGRAPH']) )
         {
